@@ -246,9 +246,8 @@ async def test():
     ])
     await client.connect()
     tools = await client.list_tools()
-    print("可用工具：", [t.name for t in tools])
+    print("可用工具:", [t.name for t in tools])
     await client.disconnect()
 
-if __name__ == "__main__":
-    asyncio.run(test())
+asyncio.run(test())
 ```
